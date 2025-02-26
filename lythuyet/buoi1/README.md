@@ -1,4 +1,4 @@
-Nội dung chi tiết của Buổi 1
+# Buổi 1: Giới thiệu về Ionic Framework và GIS mobile
 
 1\. Tổng quan về ứng dụng GIS trên di động và xu hướng phát triển
 
