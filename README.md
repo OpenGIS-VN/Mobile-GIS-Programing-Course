@@ -1,5 +1,5 @@
-# Mobile-GIS-Programing
-Mobile GIS Programing
+# Mobile-GIS-Programing-Course
+Mobile GIS Programing Course
 
 ## Giai đoạn 1: Lý thuyết (10 buổi)
 
