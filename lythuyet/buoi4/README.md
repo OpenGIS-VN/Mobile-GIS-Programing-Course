@@ -6,4 +6,4 @@
 
     -   Demo: Viết hàm TypeScript đơn giản.
 
-    ![image](https://github.com/user-attachments/assets/3cbb9cb4-087e-46a4-b73d-4a3409777720)
+![image](https://github.com/user-attachments/assets/3cbb9cb4-087e-46a4-b73d-4a3409777720)
