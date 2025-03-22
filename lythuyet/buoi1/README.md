@@ -1,4 +1,4 @@
-# Buổi 1: Giới thiệu về Ionic Framework và GIS mobile
+# Nội dung chi tiết của Buổi 1
 
 1\. Tổng quan về ứng dụng GIS trên di động và xu hướng phát triển
 
@@ -86,83 +86,166 @@
 
 -   Angular: Framework JavaScript mạnh mẽ để phát triển ứng dụng web động, là nền tảng chính của Ionic.
 
-* * * * *
+Cụ thể: 
 
-5\. Demo: Cài đặt môi trường phát triển Ionic
+HTML (HyperText Markup Language)
 
-Dưới đây là các bước chi tiết để bạn cài đặt môi trường và tạo một dự án Ionic cơ bản:
+-   Định nghĩa: HTML là ngôn ngữ đánh dấu tiêu chuẩn dùng để tạo cấu trúc và nội dung cơ bản của các trang web hoặc ứng dụng web. Nó xác định các thành phần như tiêu đề, đoạn văn, danh sách, nút bấm, v.v.
 
--   Bước 1: Cài đặt Node.js
+-   Vai trò trong Ionic:
 
-    -   Tải và cài đặt Node.js từ [trang chính thức](https://nodejs.org/).
+    -   Trong Ionic, HTML được sử dụng để xây dựng giao diện người dùng thông qua các template. Mỗi trang (page) hoặc thành phần (component) trong Ionic đều có một file HTML định nghĩa cấu trúc giao diện.
 
-    -   Sau khi cài đặt, kiểm tra phiên bản bằng lệnh:
+    -   Ionic tận dụng các web components (một phần của HTML5) để tạo ra các thành phần giao diện tái sử dụng như <ion-button>, <ion-card>.
 
-        bash
+-   Ứng dụng trong GIS mobile:
 
-        ```
-        node -v
-        npm -v
-        ```
+    -   Hiển thị các yếu tố giao diện như bản đồ (thẻ <div> để chứa Leaflet), nút bấm (để thêm marker), hoặc danh sách (hiển thị địa điểm).
 
--   Bước 2: Cài đặt Ionic CLI
+-   Ví dụ minh họa:
 
-    -   Cài đặt Ionic Command Line Interface (CLI) toàn cục bằng lệnh:
+    html
 
-        bash
-
-        ```
-        npm install -g @ionic/cli
-        ```
-
-    -   Kiểm tra phiên bản Ionic đã cài đặt:
-
-        bash
-
-        ```
-        ionic --version
-        ```
-
--   Bước 3: Tạo dự án Ionic
-
-    -   Tạo một dự án mới với template "blank" bằng lệnh:
-
-        bash
-
-        ```
-        ionic start myGISApp blank --type=angular
-        ```
-
-    -   Di chuyển vào thư mục dự án:
-
-        bash
-
-        ```
-        cd myGISApp
-        ```
-
--   Bước 4: Chạy ứng dụng
-
-    -   Khởi động ứng dụng bằng lệnh:
-
-        bash
-
-        ```
-        ionic serve
-        ```
-
-    -   Trình duyệt sẽ tự động mở và hiển thị ứng dụng Ionic cơ bản.
-
--   Kết quả demo:
-
-    -   Sau khi hoàn thành, bạn sẽ có một ứng dụng Ionic cơ bản với trang chủ, sẵn sàng để tích hợp các tính năng GIS.
+    ```
+    <ion-content>
+      <h1>Ứng dụng GIS Mobile</h1>
+      <div id="map" style="height: 400px;"></div>
+    </ion-content>
+    ```
 
 * * * * *
 
-Tổng kết
+CSS (Cascading Style Sheets)
 
--   Buổi 1 đã cung cấp cho bạn cái nhìn tổng quan về GIS trên di động, vai trò của Ionic Framework trong phát triển ứng dụng đa nền tảng, và giới thiệu các công nghệ liên quan.
+-   Định nghĩa: CSS là ngôn ngữ dùng để định dạng và trình bày giao diện, bao gồm màu sắc, kích thước, bố cục, hiệu ứng, v.v. Nó kiểm soát cách các thành phần HTML xuất hiện trên màn hình.
 
--   Phần demo hướng dẫn cài đặt môi trường giúp bạn làm quen với quy trình phát triển ứng dụng bằng Ionic.
+-   Vai trò trong Ionic:
 
--   Để nắm vững hơn, bạn nên thực hành cài đặt và khám phá cấu trúc dự án Ionic vừa tạo.
+    -   Ionic cung cấp một bộ CSS tích hợp sẵn để tạo giao diện đẹp mắt và nhất quán trên các nền tảng (iOS, Android).
+
+    -   Bạn có thể tùy chỉnh CSS để thay đổi kiểu dáng của các thành phần Ionic như nút, thẻ, hoặc bản đồ.
+
+-   Ứng dụng trong GIS mobile:
+
+    -   Tùy chỉnh giao diện bản đồ (kích thước, viền), định dạng danh sách địa điểm, hoặc tạo hiệu ứng khi nhấn vào marker.
+
+-   Ví dụ minh họa:
+
+    css
+
+    ```
+    #map {
+      height: 100%;
+      width: 100%;
+      border: 1px solid #ccc;
+    }
+    ion-button {
+      --background: #3880ff;
+      --color: white;
+    }
+    ```
+
+* * * * *
+
+JavaScript
+
+-   Định nghĩa: JavaScript là ngôn ngữ lập trình phổ biến để thêm tính năng tương tác và động vào các trang web. Nó xử lý logic, sự kiện, và giao tiếp với máy chủ.
+
+-   Vai trò trong Ionic:
+
+    -   Là nền tảng để lập trình logic trong ứng dụng Ionic, ví dụ: xử lý sự kiện nhấn nút, gọi API, hoặc cập nhật dữ liệu trên giao diện.
+
+    -   Ionic sử dụng JavaScript kết hợp với Angular để quản lý các chức năng động.
+
+-   Ứng dụng trong GIS mobile:
+
+    -   Điều khiển bản đồ Leaflet (thêm marker, zoom), lấy vị trí người dùng (Geolocation API), hoặc xử lý dữ liệu từ API GIS.
+
+-   Ví dụ minh họa:
+
+    javascript
+
+    ```
+    document.getElementById('addMarker').addEventListener('click', function() {
+      alert('Thêm marker vào bản đồ!');
+    });
+    ```
+
+* * * * *
+
+TypeScript
+
+-   Định nghĩa: TypeScript là một siêu tập (superset) của JavaScript, được phát triển bởi Microsoft. Nó bổ sung các tính năng như kiểu dữ liệu tĩnh (static typing), giao diện (interface), và lập trình hướng đối tượng, giúp mã nguồn dễ đọc, dễ bảo trì, và ít lỗi hơn.
+
+-   Vai trò trong Ionic:
+
+    -   Ionic khuyến khích sử dụng TypeScript thay vì JavaScript thuần để viết mã nguồn.
+
+    -   TypeScript được tích hợp chặt chẽ với Angular (nền tảng của Ionic), giúp định nghĩa các component, service, và xử lý dữ liệu một cách rõ ràng.
+
+-   Ứng dụng trong GIS mobile:
+
+    -   Định nghĩa kiểu dữ liệu cho tọa độ (latitude, longitude), quản lý danh sách địa điểm, và đảm bảo tính chính xác khi tích hợp Leaflet.
+
+-   Ví dụ minh họa:
+
+    typescript
+
+    ```
+    interface Location {
+      lat: number;
+      lng: number;
+    }
+
+    function addMarker(location: Location) {
+      console.log(`Thêm marker tại: ${location.lat}, ${location.lng}`);
+    }
+
+    addMarker({ lat: 21.0285, lng: 105.8542 });
+    ```
+
+* * * * *
+
+Angular
+
+-   Định nghĩa: Angular là một framework JavaScript mã nguồn mở do Google phát triển, dùng để xây dựng các ứng dụng web động, mạnh mẽ và có cấu trúc rõ ràng. Nó sử dụng kiến trúc component-based và hỗ trợ lập trình hướng đối tượng.
+
+-   Vai trò trong Ionic:
+
+    -   Ionic được xây dựng dựa trên Angular, tận dụng các khái niệm như Component, Module (NgModules), và Service để tổ chức ứng dụng.
+
+    -   Angular quản lý việc ràng buộc dữ liệu (data binding), điều hướng (routing), và tái sử dụng mã nguồn trong Ionic.
+
+-   Ứng dụng trong GIS mobile:
+
+    -   Tạo các component để hiển thị bản đồ, xử lý sự kiện trên bản đồ (click marker), và quản lý trạng thái ứng dụng (ví dụ: danh sách địa điểm được chụp hình).
+
+-   Ví dụ minh họa:
+
+    typescript
+
+    ```
+    import { Component } from '@angular/core';
+
+    @Component({
+      selector: 'app-map',
+      template: `<div id="map" style="height: 400px;"></div>`,
+    })
+    export class MapComponent {
+      constructor() {
+        console.log('Khởi tạo bản đồ GIS');
+      }
+    }
+    ```
+
+* * * * *
+
+Mối liên hệ giữa các công nghệ
+
+-   HTML + CSS: Tạo giao diện tĩnh, định dạng bản đồ và các thành phần Ionic.
+
+-   JavaScript + TypeScript: Thêm logic và tương tác, đảm bảo mã nguồn đáng tin cậy.
+
+-   Angular: Tổ chức ứng dụng thành các module và component, tích hợp chặt chẽ với Ionic.
+
+-   Ionic: Kết hợp tất cả các công nghệ trên để phát triển ứng dụng di động đa nền tảng, hỗ trợ GIS thông qua thư viện như Leaflet.
