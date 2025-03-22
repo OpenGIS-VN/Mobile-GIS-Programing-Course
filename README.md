@@ -11,37 +11,31 @@ Mobile GIS Programing Course
 
     -   Tổng quan công nghệ: HTML, CSS, JavaScript, TypeScript, Angular.
 
-    -   Demo: Cài đặt môi trường phát triển Ionic (Node.js, Ionic CLI).
-
 2.  Buổi 2: Ôn tập HTML, CSS, JavaScript
 
     -   Ôn lại HTML (cấu trúc trang web), CSS (tạo kiểu), JavaScript (logic).
 
-    -   Demo: Tạo trang web đơn giản (ví dụ: danh sách địa điểm).
+3.  Buổi 3: Giới thiệu Ionic, setup môi trường làm việc
 
-3.  Buổi 3: Giới thiệu TypeScript
+    -   Kiến trúc Ijonic
+    -   Các thành phần của Ionic
+    -   Setup môi trường (Nodejs, Ionic CLI,..)
+
+3.  Buổi 4: Giới thiệu TypeScript
 
     -   TypeScript: định nghĩa, khác biệt với JavaScript.
 
     -   Cú pháp cơ bản: biến, hàm, kiểu dữ liệu.
 
-    -   Demo: Viết hàm TypeScript đơn giản (ví dụ: tính khoảng cách).
+    -   Demo: Viết hàm TypeScript đơn giản.
 
-4.  Buổi 4: Giới thiệu Angular và NgModules
+5.  Buổi 5: Giới thiệu Angular và NgModules
 
     -   Angular: vai trò trong Ionic, khái niệm Component, Module, Service.
 
     -   NgModules: cấu trúc và cách sử dụng trong Ionic.
 
     -   Demo: Tạo ứng dụng Angular với component hiển thị thông tin.
-
-5.  Buổi 5: Ionic Framework cơ bản
-
-    -   Cấu trúc ứng dụng Ionic với NgModules.
-
-    -   Thành phần chính: Page, Component, Service.
-
-    -   Demo: Tạo ứng dụng Ionic với trang chào mừng.
 
 6.  Buổi 6: Giao diện người dùng trong Ionic
 
