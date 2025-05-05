@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Chiều cao (m)</ion-label>
+    <ion-input [(ngModel)]="height" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Cân nặng (kg)</ion-label>
+    <ion-input [(ngModel)]="weight" type="number"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="calculateBMI()">Tính BMI</ion-button>
+  <ion-item *ngIf="bmi">
+    <ion-label>Kết quả BMI: {{ bmi }}</ion-label>
+  </ion-item>
+</ion-content>
