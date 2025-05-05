@@ -85,22 +85,6 @@
 
 -   Lưu ý: Sử dụng -g để cài đặt toàn cục, cho phép chạy Ionic CLI từ bất kỳ thư mục nào.
 
-## 1.4. Cài đặt Android Studio
-
--   Mục đích: Android Studio là môi trường để phát triển và chạy ứng dụng Android.
-
--   Các bước:
-
-    1.  Tải Android Studio từ [trang chính thức](https://developer.android.com/studio).
-
-    2.  Cài đặt theo hướng dẫn.
-
-    3.  Cài thêm Android SDK và tạo một AVD (Android Virtual Device) để chạy giả lập.
-
-    4.  (Tùy chọn) Thiết lập biến môi trường ANDROID_HOME nếu cần.
-
--   Lưu ý: Đảm bảo máy tính có đủ RAM và dung lượng để chạy giả lập Android mượt mà.
-
 * * * * *
 
 # Phần 2: Tạo dự án Ionic
@@ -149,39 +133,7 @@
 
 -   Lưu ý: Mỗi khi chỉnh sửa mã nguồn, trang web sẽ tự động cập nhật.
 
-## 2.3. Chạy demo phiên bản Android
 
--   Mục đích: Chạy ứng dụng trên giả lập Android.
-
--   Các bước:
-
-    1.  Thêm nền tảng Android vào dự án:
-
-        
-
-        ```bash
-        ionic capacitor add android
-        ```
-
-    2.  Build ứng dụng:
-
-        
-
-        ```bash
-        ionic build
-        ```
-
-    3.  Mở dự án trong Android Studio:
-
-        
-
-        ```bash
-        npx cap open android
-        ```
-
-    4.  Trong Android Studio, chọn AVD và nhấn nút "Run" để chạy ứng dụng.
-
--   Lưu ý: Đảm bảo giả lập đã được cấu hình sẵn trong Android Studio.
 
 * * * * *
 
