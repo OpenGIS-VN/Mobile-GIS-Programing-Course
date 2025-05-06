@@ -61,6 +61,16 @@
 
 -   Lưu ý: NVM rất hữu ích khi làm việc với nhiều dự án yêu cầu phiên bản Node.js khác nhau.
 
+Một số lệnh khác
+
+```bash
+# Liệt kê danh sách node đang có trong hệ thống
+nvm ls
+
+# Sử dụng một version node
+nvm use ten_version
+```
+
 ## 1.3. Cài đặt Ionic CLI
 
 -   Mục đích: Ionic CLI là công cụ dòng lệnh để tạo và quản lý dự án Ionic.
