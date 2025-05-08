@@ -112,7 +112,8 @@ nvm use ten_version
         ```bash
         ionic start myFirstApp blank --type=angular
         ```
-
+      Lưu ý là thư mục dự án sẽ được tạo tại vị trí mở CMD
+      
     2.  Chọn các tùy chọn mặc định khi được hỏi.
 
     3.  Di chuyển vào thư mục dự án:
@@ -124,6 +125,17 @@ nvm use ten_version
         ```
 
 -   Lưu ý:  --type=angular chỉ định dự án sử dụng framework Angular.
+
+## Một số lệnh cmd
+
+```bash
+# Chuyển sang ổ đĩa khác trên máy tính
+# Ví dụ chuyển sang ổ D
+D:
+
+# Di chuyển sang một thư mục
+cd folder_name
+```
 
 ## 2.2. Chạy demo phiên bản Web
 

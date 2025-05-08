@@ -16,7 +16,12 @@
     <ion-input [(ngModel)]="weight" type="number"></ion-input>
   </ion-item>
   <ion-button expand="block" (click)="calculateBMI()">Tính BMI</ion-button>
-  <ion-item *ngIf="bmi">
+  <!-- <ion-item *ngIf="bmi">
     <ion-label>Kết quả BMI: {{ bmi }}</ion-label>
-  </ion-item>
+  </ion-item> -->
+  <div *ngIf="bmi !== null">
+    <p>Your BMI: {{ bmi | number: '1.1-1' }}</p>
+    <p>Category: {{ bmiCategory }}</p>
+    <ion-img [src]="bmiImage" *ngIf="bmiImage" alt="BMI Image"></ion-img>
+  </div>
 </ion-content>
