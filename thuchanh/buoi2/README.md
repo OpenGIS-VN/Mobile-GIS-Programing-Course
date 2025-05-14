@@ -38,6 +38,21 @@ Lưu ý:
 
 -   Nếu máy tính yếu, bạn có thể kết nối điện thoại thật qua cáp USB để thay thế.
 
+## Firebase Studio
+
+Dành cho bạn nào máy tính yếu quá thì có thể thử dùng Firebase Studio của Google (Hiện tại đang miễn phí)
+* Đăng ký workspace là Android Studio Cloud
+* Truy cập và làm việc trực tiếp từ trình duyệt mà không cần cài đặt phần mềm cục bộ
+* Đây là một máy ảo Linux được chạy từ xa trên đám mây
+* Hỗ trợ lưu dữ liệu (data không bị mất khi tắt máy)
+* Các phần mềm cài thêm sẽ bị xóa khi tắt máy
+* Cấu hình cao
+
+![image](https://github.com/user-attachments/assets/2b7e64c9-1805-4721-8946-edccfca0136f)
+![image](https://github.com/user-attachments/assets/0c9a9d5a-3866-4a15-b3b3-ef8e22185496)
+
+
+
 * * * * *
 
 # 2\. Build ứng dụng Ionic trên môi trường Android
