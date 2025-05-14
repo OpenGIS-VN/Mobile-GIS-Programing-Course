@@ -265,20 +265,22 @@ Chúng ta sẽ tạo một ứng dụng Ionic đơn giản để lấy tọa đ�
 
 4.4.1. Logic (TypeScript)
 
--   File:  src/app/tab1/tab1.page.ts
+-   File:  src/app/home/home.page.ts
 
 -   Mã nguồn:    
 
     ```typescript
     import { Component } from '@angular/core';
     import { Geolocation } from '@capacitor/geolocation';
-
+    
     @Component({
-      selector: 'app-tab1',
-      templateUrl: 'tab1.page.html',
-      styleUrls: ['tab1.page.scss']
+      selector: 'app-home',
+      templateUrl: 'home.page.html',
+      styleUrls: ['home.page.scss'],
+      standalone: false,
     })
-    export class Tab1Page {
+    export class HomePage {
+
       latitude?: number;  // Tọa độ vĩ độ
       longitude?: number; // Tọa độ kinh độ
       error?: string;     // Thông báo lỗi (nếu có)
@@ -312,14 +314,16 @@ Chúng ta sẽ tạo một ứng dụng Ionic đơn giản để lấy tọa đ�
 
 4.4.2. Giao diện (HTML)
 
--   File:  src/app/tab1/tab1.page.html
+-   File:  src/app/home/home.page.html
 
 -   Mã nguồn:    
 
     ```html
-    <ion-header>
+    <ion-header [translucent]="true">
       <ion-toolbar>
-        <ion-title>Tab 1</ion-title>
+        <ion-title>
+          Blank
+        </ion-title>
       </ion-toolbar>
     </ion-header>
 
