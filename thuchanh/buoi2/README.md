@@ -40,6 +40,8 @@ Lưu ý:
 
 ## Firebase Studio
 
+https://idx.google.com/
+
 Dành cho bạn nào máy tính yếu quá thì có thể thử dùng Firebase Studio của Google (Hiện tại đang miễn phí)
 * Đăng ký workspace là Android Studio Cloud
 * Truy cập và làm việc trực tiếp từ trình duyệt mà không cần cài đặt phần mềm cục bộ
@@ -139,6 +141,14 @@ Chúng ta sẽ sử dụng Ionic CLI và Capacitor để xây dựng ứng dụn
     -   Hoặc điện thoại thật đã bật USB Debugging và kết nối qua cáp USB.
 
 -   Lưu ý: Nếu dùng Live Reload, đảm bảo máy tính và thiết bị cùng mạng Wi-Fi.
+
+## 2.5 Debug
+
+```txt
+edge://inspect/#devices
+
+chrome://inspect/#devices
+```
 
 * * * * *
 
@@ -250,6 +260,9 @@ Chúng ta sẽ tạo một ứng dụng Ionic đơn giản để lấy tọa đ�
 
 4.4. Mã nguồn ứng dụng
 
+![image](https://github.com/user-attachments/assets/68fdba43-e493-4167-8049-3f4d6867a2f3)
+
+
 4.4.1. Logic (TypeScript)
 
 -   File:  src/app/tab1/tab1.page.ts
@@ -350,3 +363,7 @@ Lưu ý quan trọng
     -   Kết nối điện thoại qua USB và bật USB Debugging trong Developer Options.
 
 -   Xử lý lỗi: Luôn kiểm tra lỗi (GPS tắt, không có quyền, v.v.) để ứng dụng không bị crash.
+
+## Nâng cấp
+
+* Thêm tính năng mở tọa độ trong Google Map
