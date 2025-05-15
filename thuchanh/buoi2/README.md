@@ -378,3 +378,16 @@ Lưu ý quan trọng
 ## Nâng cấp
 
 * Thêm tính năng mở tọa độ trong Google Map
+
+---
+
+## Note khác:
+
+| Lôi Unable to determine Android SDK directory
+
+Tạo file `android/local.properties`
+
+
+```txt
+sdk.dir=/Users/dtlong/Library/Android/sdk
+```
