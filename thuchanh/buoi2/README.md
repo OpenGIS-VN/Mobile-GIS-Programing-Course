@@ -20,6 +20,9 @@ Trong buổi học này, chúng ta sẽ thực hiện các nội dung sau:
 
 ## 1.2. Cách thiết lập máy ảo Android
 
+![image](https://github.com/user-attachments/assets/e0035a00-58aa-4bc2-90ac-d7c52ca0777e)
+
+
 1.  Mở **Android Studio**.
 
 2.  Vào menu **Tools > AVD Manager** (Quản lý thiết bị ảo).
@@ -180,7 +183,11 @@ File APK (Android Package) là định dạng cài đặt ứng dụng trên And
     2.  Chạy lệnh build:        
 
         ```bash
+        # Trên Windows
         gradlew assembleDebug
+
+        Trên Linux/Mac
+        ./gradlew assembleDebug
         ```
 
 -   Ý nghĩa:
