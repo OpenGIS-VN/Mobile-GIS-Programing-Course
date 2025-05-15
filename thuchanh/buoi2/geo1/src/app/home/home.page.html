@@ -20,6 +20,7 @@
   <div *ngIf="latitude && longitude">
     <p>Latitude: {{ latitude }}</p>
     <p>Longitude: {{ longitude }}</p>
+    <a href="https://www.google.com/maps?q={{ latitude }},{{ longitude }}">Xem vị trí 111</a>
   </div>
   <div *ngIf="error">
     <p style="color:red">{{ error }}</p>
