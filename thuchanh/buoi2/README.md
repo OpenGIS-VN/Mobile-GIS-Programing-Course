@@ -186,7 +186,7 @@ File APK (Android Package) là định dạng cài đặt ứng dụng trên And
         # Trên Windows
         gradlew assembleDebug
 
-        Trên Linux/Mac
+        # Trên Linux/Mac
         ./gradlew assembleDebug
         ```
 
