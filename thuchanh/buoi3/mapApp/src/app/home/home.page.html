@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ứng dụng bản đồ</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-button expand="block" (click)="getCurrentPosition()">Lấy vị trí hiện tại</ion-button>
+  <div *ngIf="latitude && longitude">
+    <p>Latitude: {{ latitude }}</p>
+    <p>Longitude: {{ longitude }}</p>
+  </div>
+  <div *ngIf="error">
+    <p style="color: red;">{{ error }}</p>
+  </div>
+  <div id="map" style="height: 70%; width: 100%;"></div>
+</ion-content>

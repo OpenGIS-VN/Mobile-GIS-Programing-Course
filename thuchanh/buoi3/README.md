@@ -53,6 +53,9 @@ Mục tiêu
 
         ```bash
         npm install leaflet
+
+        npm install --save-dev @types/leaflet
+
         ```
 
     2.  Cài đặt style (CSS) của Leaflet:
