@@ -1,0 +1,7 @@
+{
+  "name": "nonglammap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
