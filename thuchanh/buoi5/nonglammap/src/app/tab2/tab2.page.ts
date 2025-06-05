@@ -53,7 +53,13 @@ export class Tab2Page {
       const geojsonLayer = L.geoJSON(geojsonData, {
         onEachFeature: (feature, layer) => {
           if (feature.properties && feature.properties.Name) {
-            layer.bindPopup(feature.properties.Name);
+            const popupContent = `
+              <div>
+                <strong>${feature.properties.Name}</strong><br>
+                <a href="/tuongvi" target="_self">Xem chi tiết</a>
+              </div>
+            `;
+            layer.bindPopup(popupContent);
           }
         }
       });
