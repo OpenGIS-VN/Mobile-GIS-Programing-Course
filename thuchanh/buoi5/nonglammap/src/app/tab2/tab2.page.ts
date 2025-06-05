@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import * as L from 'leaflet';
 import { Geolocation } from '@capacitor/geolocation';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tab2',
@@ -16,7 +17,7 @@ export class Tab2Page {
   error?: string;
   userMarker?: L.Marker;
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.initMap();
@@ -41,6 +42,20 @@ export class Tab2Page {
       .addTo(this.map!)
       .bindPopup('Hà Nội');
       // .openPopup();
+
+    // Load GeoJSON file and add to map
+    this.loadGeoJSON();
+  }
+
+  private loadGeoJSON(): void {
+    const geojsonPath = 'assets/map/nonglam.geojson';
+    this.http.get(geojsonPath).subscribe((geojsonData: any) => {
+      const geojsonLayer = L.geoJSON(geojsonData);
+      geojsonLayer.addTo(this.map!);
+
+      // Zoom to fit the GeoJSON layer
+      this.map!.fitBounds(geojsonLayer.getBounds());
+    });
   }
 
   async getCurrentPosition() {
