@@ -84,3 +84,13 @@ selectSearchResult(result: any) {
   this.searchResults = [];
 }
 ```
+
+## Build app
+
+### Thay đổi app name, version app
+
+Xem https://dothanhlong.org/ionic-capacitor-mobile-dev-chang-app-name-version-in-android/
+
+### Thay đổi icon app
+
+https://capacitorjs.com/docs/guides/splash-screens-and-icons
