@@ -7,13 +7,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-button expand="block" (click)="getCurrentPosition()">Lấy vị trí hiện tại</ion-button>
-  <div *ngIf="latitude && longitude">
-    <p>Latitude: {{ latitude }}</p>
-    <p>Longitude: {{ longitude }}</p>
-  </div>
-  <div *ngIf="error">
-    <p style="color: red;">{{ error }}</p>
-  </div>
   <div id="map" style="height: 100%; width: 100%;"></div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="getCurrentPosition()">
+      <ion-icon name="locate"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
