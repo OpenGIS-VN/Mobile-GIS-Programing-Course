@@ -3,9 +3,9 @@
 "name": "nonglam",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "Name": "Giảng đường Phượng Vĩ", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 106.7928396, 10.8719562, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Giảng đường Rạng Đông", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 106.79217, 10.8705338, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Giảng đường Cát Tường", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 106.791991, 10.8733041, 0.0 ] } },
-{ "type": "Feature", "properties": { "Name": "Giảng Đường Tường Vy", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null }, "geometry": { "type": "Point", "coordinates": [ 106.7919858, 10.8735777, 0.0 ] } }
+{ "type": "Feature", "properties": { "Name": "Giảng đường Phượng Vĩ", "description": null, "path": null }, "geometry": { "type": "Point", "coordinates": [ 106.7928396, 10.8719562, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Giảng đường Rạng Đông", "description": null }, "geometry": { "type": "Point", "coordinates": [ 106.79217, 10.8705338, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Giảng đường Cát Tường", "description": null, "path": "cattuong" }, "geometry": { "type": "Point", "coordinates": [ 106.791991, 10.8733041, 0.0 ] } },
+{ "type": "Feature", "properties": { "Name": "Giảng Đường Tường Vy", "description": null, "path": "tuongvi" }, "geometry": { "type": "Point", "coordinates": [ 106.7919858, 10.8735777, 0.0 ] } }
 ]
 }

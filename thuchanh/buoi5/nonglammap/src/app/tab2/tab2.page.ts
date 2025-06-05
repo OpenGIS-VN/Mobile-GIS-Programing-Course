@@ -56,7 +56,7 @@ export class Tab2Page {
             const popupContent = `
               <div>
                 <strong>${feature.properties.Name}</strong><br>
-                <a href="/tuongvi" target="_self">Xem chi tiết</a>
+                <a href="/${feature.properties.path}" target="_self">Xem chi tiết</a>
               </div>
             `;
             layer.bindPopup(popupContent);
