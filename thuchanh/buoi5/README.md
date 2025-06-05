@@ -38,7 +38,19 @@
   private loadGeoJSON(): void {
     const geojsonPath = 'assets/map/nonglam.geojson';
     this.http.get(geojsonPath).subscribe((geojsonData: any) => {
-      const geojsonLayer = L.geoJSON(geojsonData);
+      const geojsonLayer = L.geoJSON(geojsonData, {
+        onEachFeature: (feature, layer) => {
+          if (feature.properties && feature.properties.Name) {
+            const popupContent = `
+              <div>
+                <strong>${feature.properties.Name}</strong><br>
+                <a href="/tuongvi" target="_self">Xem chi tiết</a>
+              </div>
+            `;
+            layer.bindPopup(popupContent);
+          }
+        }
+      });
       geojsonLayer.addTo(this.map!);
 
       // Zoom to fit the GeoJSON layer
