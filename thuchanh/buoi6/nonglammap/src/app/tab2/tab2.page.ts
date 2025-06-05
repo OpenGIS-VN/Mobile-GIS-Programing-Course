@@ -16,6 +16,7 @@ export class Tab2Page {
   longitude?: number;
   error?: string;
   userMarker?: L.Marker;
+  searchResults: any[] = []; // Store search result data
 
   constructor(private http: HttpClient) {}
 
@@ -99,6 +100,58 @@ export class Tab2Page {
       this.latitude = undefined;
       this.longitude = undefined;
     }
+  }
+
+  onSearch(event: any) {
+    const query = event.target.value;
+    if (!query || query.trim() === '') {
+      // Clear search results and remove markers
+      this.searchResults.forEach(marker => {
+        if (this.map && marker.marker) {
+          this.map.removeLayer(marker.marker);
+        }
+      });
+      this.searchResults = [];
+      return;
+    }
+
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
+    this.http.get(url).subscribe((results: any) => {
+      // Clear previous search markers
+      this.searchResults.forEach(marker => {
+        if (this.map && marker.marker) {
+          this.map.removeLayer(marker.marker);
+        }
+      });
+
+      this.searchResults = results; // Update the search results list
+    });
+  }
+
+  selectSearchResult(result: any) {
+    const lat = parseFloat(result.lat);
+    const lon = parseFloat(result.lon);
+
+    // Clear previous search markers
+    this.searchResults.forEach(marker => {
+      if (this.map && marker.marker) {
+        this.map.removeLayer(marker.marker);
+      }
+    });
+
+    // Add marker for the selected result
+    const marker = L.marker([lat, lon])
+      .addTo(this.map!)
+      .bindPopup(`<strong>${result.display_name}</strong>`)
+      .openPopup();
+
+    // Center the map on the selected result
+    if (this.map) {
+      this.map.setView([lat, lon], 13);
+    }
+
+    // Clear the search results list
+    this.searchResults = [];
   }
 
 }
