@@ -84,10 +84,3 @@ selectSearchResult(result: any) {
   this.searchResults = [];
 }
 ```
-
-## Hướng dẫn sử dụng
-1. Nhập từ khóa vào thanh tìm kiếm (ví dụ: "Hồ Chí Minh").
-2. Chờ danh sách kết quả hiển thị bên dưới thanh tìm kiếm.
-3. Nhấn vào một kết quả để xem vị trí trên bản đồ.
-4. Bản đồ sẽ di chuyển đến vị trí đã chọn và hiển thị marker.
-
