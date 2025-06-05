@@ -30,18 +30,18 @@ export class Tab2Page {
   }
 
   private initMap(): void {
-    this.map = L.map('map').setView([21.0285, 105.8542], 13); // Set vị trí và zoom mặc định
+    this.map = L.map('map').setView([10.8735607, 106.7962999], 15); // Set vị trí và zoom mặc định
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
   
 
-    // Thêm marker tại vị trí cố định
-    L.marker([21.0285, 105.8542])
-      .addTo(this.map!)
-      .bindPopup('Hà Nội');
-      // .openPopup();
+    // // Thêm marker tại vị trí cố định
+    // L.marker([21.0285, 105.8542])
+    //   .addTo(this.map!)
+    //   .bindPopup('Hà Nội');
+    //   // .openPopup();
 
     // Load GeoJSON file and add to map
     this.loadGeoJSON();
@@ -50,7 +50,13 @@ export class Tab2Page {
   private loadGeoJSON(): void {
     const geojsonPath = 'assets/map/nonglam.geojson';
     this.http.get(geojsonPath).subscribe((geojsonData: any) => {
-      const geojsonLayer = L.geoJSON(geojsonData);
+      const geojsonLayer = L.geoJSON(geojsonData, {
+        onEachFeature: (feature, layer) => {
+          if (feature.properties && feature.properties.Name) {
+            layer.bindPopup(feature.properties.Name);
+          }
+        }
+      });
       geojsonLayer.addTo(this.map!);
 
       // Zoom to fit the GeoJSON layer
