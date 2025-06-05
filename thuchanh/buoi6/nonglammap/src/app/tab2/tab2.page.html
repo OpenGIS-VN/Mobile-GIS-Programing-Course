@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bản đồ
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Tìm kiếm địa điểm" (ionInput)="onSearch($event)"></ion-searchbar>
+  <div id="map" style="height: 90%; width: 100%;"></div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="getCurrentPosition()">
+      <ion-icon name="locate"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

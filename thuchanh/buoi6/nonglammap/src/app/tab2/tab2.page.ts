@@ -16,6 +16,7 @@ export class Tab2Page {
   longitude?: number;
   error?: string;
   userMarker?: L.Marker;
+  searchResults: L.Marker[] = []; // Store search result markers
 
   constructor(private http: HttpClient) {}
 
@@ -56,7 +57,7 @@ export class Tab2Page {
             const popupContent = `
               <div>
                 <strong>${feature.properties.Name}</strong><br>
-                <a href="/${feature.properties.path}" target="_self">Xem chi tiết</a>
+                <a href="/tuongvi" target="_self">Xem chi tiết</a>
               </div>
             `;
             layer.bindPopup(popupContent);
@@ -99,6 +100,40 @@ export class Tab2Page {
       this.latitude = undefined;
       this.longitude = undefined;
     }
+  }
+
+  onSearch(event: any) {
+    const query = event.target.value;
+    if (!query || query.trim() === '') {
+      return;
+    }
+
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
+    this.http.get(url).subscribe((results: any) => {
+      // Clear previous search results
+      this.searchResults.forEach(marker => {
+        if (this.map) {
+          this.map.removeLayer(marker);
+        }
+      });
+      this.searchResults = [];
+
+      results.forEach((result: any) => {
+        const lat = parseFloat(result.lat);
+        const lon = parseFloat(result.lon);
+        const marker = L.marker([lat, lon])
+          .addTo(this.map!)
+          .bindPopup(`<strong>${result.display_name}</strong>`)
+          .openPopup();
+
+        this.searchResults.push(marker);
+
+        // Optionally, zoom to the first result
+        if (this.map) {
+          this.map.setView([lat, lon], 13);
+        }
+      });
+    });
   }
 
 }
