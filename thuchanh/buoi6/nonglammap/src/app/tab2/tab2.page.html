@@ -4,11 +4,19 @@
       Bản đồ
     </ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Tìm kiếm địa điểm" (ionInput)="onSearch($event)" debounce="500"></ion-searchbar>
+  </ion-toolbar>
+  <ion-list *ngIf="searchResults.length > 0">
+    <ion-item *ngFor="let result of searchResults" (click)="selectSearchResult(result)">
+      {{ result.display_name }}
+    </ion-item>
+  </ion-list>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar placeholder="Tìm kiếm địa điểm" (ionInput)="onSearch($event)"></ion-searchbar>
-  <div id="map" style="height: 90%; width: 100%;"></div>
+  
+  <div id="map" style="height: 100%; width: 100%;"></div>
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="getCurrentPosition()">
       <ion-icon name="locate"></ion-icon>
