@@ -110,9 +110,18 @@ nvm use ten_version
         
 
         ```bash
+        ionic start myFirstApp
+        # hoặc nếu chọn angular, template trắng
         ionic start myFirstApp blank --type=angular
         ```
       Lưu ý là thư mục dự án sẽ được tạo tại vị trí mở CMD
+
+<img width="607" height="202" alt="image" src="https://github.com/user-attachments/assets/151a4763-1b3b-441b-9596-811627bebdcf" />
+<img width="604" height="317" alt="image" src="https://github.com/user-attachments/assets/f0c6e5a6-f51a-476f-98ca-751e4781902d" />
+<img width="608" height="356" alt="image" src="https://github.com/user-attachments/assets/e3a7bdfa-1a11-495c-a081-987386689455" />
+
+
+
       
     2.  Chọn các tùy chọn mặc định khi được hỏi.
 
