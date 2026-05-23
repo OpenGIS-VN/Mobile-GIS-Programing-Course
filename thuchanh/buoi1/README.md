@@ -164,7 +164,19 @@ cd folder_name
 
 -   Lưu ý: Mỗi khi chỉnh sửa mã nguồn, trang web sẽ tự động cập nhật.
 
+## 2.3 Một số lệnh khác
 
+```bash
+# Build after clone
+npm install
+ionic build
+# ionic cap add android
+ionic cap copy
+ionic cap sync
+
+# Live reload on emulator/device
+ionic cap run android -l --external
+```
 
 * * * * *
 
